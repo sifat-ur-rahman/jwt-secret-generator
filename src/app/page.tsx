@@ -29,7 +29,7 @@ export default function JWTGenerator() {
   };
 
   return (
-    <main className="min-h-screen bg-background flex items-center justify-center px-4 py-12">
+    <main className="min-h-screen bg-background flex items-center justify-center px-4 ">
       <div className="w-full max-w-2xl">
         {/* Header */}
         <div className="mb-8 text-center">
@@ -98,7 +98,7 @@ export default function JWTGenerator() {
           <div className="flex gap-3">
             <button
               onClick={generateSecret}
-              className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+              className="flex-1 flex items-center cursor-pointer justify-center gap-2 px-4 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
             >
               <RefreshCw size={18} />
               Generate Secret
@@ -108,7 +108,7 @@ export default function JWTGenerator() {
               disabled={!secret}
               className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 font-semibold rounded-lg transition-colors ${
                 secret
-                  ? "bg-green-500/10 text-green-600 hover:bg-green-500/20 border border-green-500/30"
+                  ? "bg-green-500/10 text-green-600 cursor-pointer hover:bg-green-500/20 border border-green-500/30"
                   : "bg-muted text-muted-foreground cursor-not-allowed border border-border"
               }`}
             >
