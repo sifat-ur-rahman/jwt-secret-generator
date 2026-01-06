@@ -2,7 +2,7 @@
 
 A fast, secure, and professional tool to generate cryptographically secure random secrets for JWT authentication. Built with Next.js 16 and React 19.
 
-### [jwt-secret-generator.vercel.app](https://jwt-secret-generator.vercel.app)
+### 🚀 Live URL — [jwt-secret-generator.vercel.app](https://jwt-secret-generator.vercel.app)
 
 ## Features
 
