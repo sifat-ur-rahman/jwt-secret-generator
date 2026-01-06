@@ -29,7 +29,7 @@ export default function JWTGenerator() {
   };
 
   return (
-    <main className="min-h-screen bg-background flex items-center justify-center px-4 ">
+    <main className="min-h-screen bg-background flex items-center justify-center px-4  hidden-scroll">
       <div className="w-full max-w-2xl">
         {/* Header */}
         <div className="mb-8 text-center">
