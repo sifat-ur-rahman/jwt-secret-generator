@@ -59,22 +59,6 @@ npm start
 - **No Storage**: Secrets are not stored, logged, or cached
 - **Cryptographically Secure**: Uses `crypto.getRandomValues()` for true randomness
 
-## Tech Stack
-
-- **Framework**: [Next.js 16](https://nextjs.org/) - React framework with App Router
-- **UI Components**: [shadcn/ui](https://ui.shadcn.com/) - High-quality React components
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) - Utility-first CSS framework
-- **Icons**: [lucide-react](https://lucide.dev/) - Beautiful icon library
-
-## Browser Compatibility
-
-Works in all modern browsers that support:
-
-- ES6+ JavaScript
-- Web Crypto API
-- CSS Custom Properties
-- CSS Grid/Flexbox
-
 ## Performance
 
 - **Zero External Requests**: No API calls or external dependencies for secret generation
