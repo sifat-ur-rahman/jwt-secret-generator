@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { X, Copy, RefreshCw } from "lucide-react";
 import Image from "next/image";
+import { toast } from "sonner";
 
 export default function JWTGenerator() {
   const [secret, setSecret] = useState("");
@@ -22,6 +23,7 @@ export default function JWTGenerator() {
     navigator.clipboard.writeText(secret);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+    toast.success("Secret copied to clipboard");
   };
 
   const clearSecret = () => {
@@ -52,7 +54,7 @@ export default function JWTGenerator() {
         </div>
 
         {/* Card */}
-        <div className="bg-card border border-border rounded-2xl shadow-lg p-8">
+        <div className="bg-card border border-border rounded-2xl shadow-lg p-5 md:p-8">
           {/* Output Section */}
           <div className="mb-8 ">
             <div className="relative">
@@ -89,13 +91,14 @@ export default function JWTGenerator() {
             <p className="text-xs text-muted-foreground font-mono">
               Equivalent to:{" "}
               <span className="text-foreground">
-                require('crypto').randomBytes(64).toString('hex')
+                require('crypto').randomBytes(64) <br className="md:hidden" />
+                .toString('hex')
               </span>
             </p>
           </div>
 
           {/* Buttons */}
-          <div className="flex gap-3">
+          <div className="flex flex-col md:flex-row  gap-5  md:gap-3">
             <button
               onClick={generateSecret}
               className="flex-1 flex items-center cursor-pointer justify-center gap-2 px-4 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
@@ -139,12 +142,12 @@ export default function JWTGenerator() {
         </div>
       </div>
 
-      {/* Toast */}
+      {/* Toast
       {copied && (
         <div className="fixed bottom-6 right-6 bg-green-600 text-white px-4 py-3 rounded-lg shadow-lg animate-in fade-in slide-in-from-bottom-4">
           Secret copied to clipboard
         </div>
-      )}
+      )} */}
     </main>
   );
 }
