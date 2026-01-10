@@ -24,6 +24,10 @@ A fast, secure, and professional tool to generate cryptographically secure rando
 ### Installation
 
 1. Clone or download the project
+   ```bash
+   git clone https://github.com/sifat-ur-rahman/jwt-secret-generator.git
+   ```
+
 2. Install dependencies:
 
    ```bash
